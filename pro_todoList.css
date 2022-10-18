@@ -1,3 +1,47 @@
-body{
-    background-color: black;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Hind Siliguri', sans-serif;
 }
+
+body{
+    background-color: #F2EBE9;
+}
+
+
+.titulo h1{
+    display: flex;
+    justify-content: center;
+    font-family: 'Hind Siliguri', sans-serif;
+    color:#243A73;
+}
+
+
+.cuadro_principal{
+    margin: auto;
+    background-color: #FCF8E8;
+    border: 2px solid black;
+    height: 35vh;
+    width: 30vw;
+}
+
+.botones{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.agregar,
+.marcar{
+    border: none;
+    font-weight: 600;
+    background-color: #243A73;
+    color:#F2EBE9;
+    height: 3.5em;
+    width: 6em;
+}
+.agregar{
+    margin-right: 25px;
+}
+
