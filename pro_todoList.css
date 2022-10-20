@@ -1,3 +1,4 @@
+/*Configuración inicial*/
 * {
     margin: 0;
     padding: 0;
@@ -9,7 +10,7 @@ body{
     background-color: #F2EBE9;
 }
 
-
+/*Modificando el titulo de la pagina , y centrandolo*/
 .titulo h1{
     display: flex;
     justify-content: center;
@@ -18,6 +19,7 @@ body{
 }
 
 
+/*Crenado el div principal que es donde apareceran las tareas*/
 .cuadro_principal{
     margin: auto;
     background-color: #FCF8E8;
@@ -26,22 +28,40 @@ body{
     width: 30vw;
 }
 
+/*Div donde se guardaran los botones*/
 .botones{
     display: flex;
     justify-content: center;
-    margin-top: 20px;
+    margin-top: 20px; 
 }
 
+/*Botones en los que el usario podra interactuar*/
 .agregar,
-.marcar{
+.marcar,
+.eliminar{
     border: none;
     font-weight: 600;
     background-color: #243A73;
     color:#F2EBE9;
     height: 3.5em;
-    width: 6em;
+    width: 6em;    
 }
 .agregar{
-    margin-right: 25px;
+    margin-right: 10px;
+}
+
+.eliminar{
+    margin-left: 10px;
+}
+
+.botones button:hover{
+    background-color: #152243;
+}
+
+#tarea{
+    display: none;
+    margin: auto;
+    margin-top: 20px;
+    width: 25vw;
 }
 
