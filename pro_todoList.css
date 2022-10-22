@@ -21,15 +21,20 @@ img{
     color:#243A73;
 }
 
-.fondo_oscuro{
-    position: relative;
+#fondo_oscuro, #fondo_claro{
+    display: inline;
+    position: absolute;
     left: 90%;
-    top: -2.3em;
+    top: .9em;
     height: 1.5em;
 }
 
-.fondo_oscuro:hover{
+#fondo_oscuro:hover, #fondo_claro:hover{
     cursor: pointer;
+}
+
+#fondo_claro{
+    visibility: hidden;
 }
 
 
@@ -38,6 +43,7 @@ img{
 /*Crenado el div principal que es donde apareceran las tareas*/
 #cuadro_principal{
     margin: auto;
+    margin-top: 20px;
     background-color: #FCF8E8;
     border: 2px solid black;
     height: 35vh;
