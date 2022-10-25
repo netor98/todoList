@@ -45,7 +45,7 @@ img{
     margin: auto;
     margin-top: 20px;
     background-color: #FCF8E8;
-    border: 2px solid black;
+    border: 2px solid rgba(0, 0, 0, 0.2);
     height: 35vh;
     width: 30vw;
 }
@@ -81,6 +81,7 @@ img{
 }
 
 #tarea{
+    border: 2px solid rgba(0, 0, 0, 0.2);
     display: none;
     margin: auto;
     margin-top: 20px;

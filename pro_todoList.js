@@ -6,6 +6,10 @@ const iconDark = document.getElementById("fondo_oscuro");
 const changecolor = document.getElementById("fondo");
 const iconLight = document.getElementById("fondo_claro");
 const task = document.getElementById("tarea");
+const mainDiv = document.getElementById("cuadro_principal");
+const title = document.getElementById("title");
+ 
+
 
 
 //Funcion que guarda el id de la tarea en una variables y hace que aparezca en el documento
@@ -16,9 +20,15 @@ function Add(){
 
 //Funcion que cambia el fondo claro a oscuro
 function dark(){
-    changecolor.style.backgroundColor = "#191919";
+    changecolor.style.backgroundColor = "#151515";
     iconDark.style.visibility = "hidden";
     iconLight.style.visibility = "visible";
+    mainDiv.style.backgroundColor = "#191A19"
+    task.style.backgroundColor = "#191A19"
+    task.style.color = "#F2EBE9";
+    mainDiv.style.color = "#F2EBE9";
+    title.style.color = "#F2EBE9";
+    
     return true;
 }
 
@@ -28,15 +38,19 @@ function light(){
     changecolor.style.backgroundColor = "#F2EBE9";
     iconLight.style.visibility = "hidden";
     iconDark.style.visibility = "visible";
-
+    mainDiv.style.backgroundColor = "#FCF8E8";
+    mainDiv.style.color = "#191919";
+    task.style.backgroundColor = "#FCF8E8";
+    task.style.color = "#191919";
+    title.style.color = "#243A73";
 }
 
 
 //Funcion que agrega las tareas al div principal
 document.addEventListener("keyup", function(event) {
     if (event.code === 'Enter') {
-        let mainDiv = document.getElementById("cuadro_principal");
         let element = document.getElementById("tarea").value;
+        document.getElementById("tarea").value = "";
         let content = document.createTextNode(element);
         console.log(element);
         mainDiv.appendChild(content);
