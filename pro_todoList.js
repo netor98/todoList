@@ -28,7 +28,6 @@ function dark(){
     task.style.color = "#F2EBE9";
     mainDiv.style.color = "#F2EBE9";
     title.style.color = "#F2EBE9";
-    
     return true;
 }
 
@@ -52,7 +51,8 @@ document.addEventListener("keyup", function(event) {
         let element = document.getElementById("tarea").value;
         document.getElementById("tarea").value = "";
         let content = document.createTextNode(element);
-        console.log(element);
+        let brackets = document.createTextNode("[  ]");
+        mainDiv.appendChild(brackets);
         mainDiv.appendChild(content);
         mainDiv.appendChild(document.createElement('br'));
     }

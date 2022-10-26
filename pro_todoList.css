@@ -46,8 +46,25 @@ img{
     margin-top: 20px;
     background-color: #FCF8E8;
     border: 2px solid rgba(0, 0, 0, 0.2);
-    height: 35vh;
-    width: 30vw;
+    height: 45vh;
+    width: 35vw;
+    font-size: 1.2em;
+    letter-spacing: .5px;
+    overflow: scroll;
+    overflow-x: hidden;
+    border-radius: 4px;
+}
+
+#cuadro_principal::-webkit-scrollbar{
+    width: 9px;
+    border-radius: 100px;
+}
+#cuadro_principal::-webkit-scrollbar-track {
+    background-color: #F2EBE9;
+
+}
+#cuadro_principal::-webkit-scrollbar-thumb{
+    background-color: #152243;
 }
 
 /*Div donde se guardaran los botones*/
