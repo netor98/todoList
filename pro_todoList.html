@@ -19,13 +19,14 @@
         <div id="cuadro_principal">
         </div>
         
-        <input type="text" placeholder="Escribe la tarea" id="tarea">
+        <input type="text" placeholder="Type the task, then press enter" id="tarea">
+        <input type="number" placeholder="Type the number of the task, then press enter" id="delete_task">
 
         <div class="botones">
             
             <button class="agregar" onclick="Add()">Add</button>
-            <button class="marcar">Mark</button>
-            <button class="eliminar">Delete</button>
+            <button class="marcar" >Mark</button>
+            <button class="eliminar" onclick="deleteTask()">Delete</button>
         </div>
 
           
