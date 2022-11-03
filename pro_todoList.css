@@ -48,12 +48,14 @@ img{
     border: 2px solid rgba(0, 0, 0, 0.2);
     height: 45vh;
     width: 35vw;
-    font-size: 1.2em;
+    font-size: 1.4em;
     letter-spacing: .5px;
     overflow: scroll;
     overflow-x: hidden;
     border-radius: 4px;
 }
+
+
 
 #cuadro_principal::-webkit-scrollbar{
     width: 9px;
@@ -72,29 +74,29 @@ img{
     display: flex;
     justify-content: center;
     margin-top: 20px; 
+    
 }
 
 /*Botones en los que el usario podra interactuar*/
-.agregar,
-.marcar,
-.eliminar{
+#agregar,
+#eliminar{
     border: none;
     font-weight: 600;
     background-color: #243A73;
     color:#F2EBE9;
-    height: 3.5em;
-    width: 6em;    
+    height: 4em;
+    width: 5.5em;   
+    font-size: 1em; 
 }
-.agregar{
+#agregar{
     margin-right: 10px;
 }
-
-.eliminar{
+#eliminar{
     margin-left: 10px;
 }
 
-.botones button:hover{
-    background-color: #152243;
+#agregar:hover{
+    background-color: #0d1231;
 }
 
 #tarea, #delete_task{

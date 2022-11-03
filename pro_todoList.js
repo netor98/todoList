@@ -8,7 +8,9 @@ const iconLight = document.getElementById("fondo_claro");
 const task = document.getElementById("tarea");
 const mainDiv = document.getElementById("cuadro_principal");
 const title = document.getElementById("title");
-const del_task = document.getElementById("delete_task")
+const colorBoxes = document.getElementById("agregar")
+const colorBoxes2 = document.getElementById("eliminar")
+
  
 
 
@@ -16,7 +18,6 @@ const del_task = document.getElementById("delete_task")
 //Funcion que guarda el id de la tarea en una variables y hace que aparezca en el documento
 function Add(){
     task.style.display = "block";
-    del_task.style.display = "none";
     return true;
 }
 
@@ -28,11 +29,17 @@ function dark(){
     mainDiv.style.backgroundColor = "#191A19"
     task.style.backgroundColor = "#191A19"
     task.style.color = "#F2EBE9";
-    del_task.style.backgroundColor = "#191A19"
-    del_task.style.color = "#F2EBE9"
     mainDiv.style.color = "#F2EBE9";
     title.style.color = "#F2EBE9";
+    colorBoxes.style.backgroundColor = "#191A19";
+    colorBoxes2.style.backgroundColor = "#191A19";
     return true;
+}
+
+
+function hoverBoxesDark(){
+    colorBoxes.style.backgroundColor = "#F2EBE9";
+    colorBoxes2.style.backgroundColor = "#F2EBE9";
 }
 
 
@@ -45,9 +52,9 @@ function light(){
     mainDiv.style.color = "#191919";
     task.style.backgroundColor = "#FCF8E8";
     task.style.color = "#191919";
-    del_task.style.backgroundColor = "#FCF8E8";
-    del_task.style.color = "#191919";
     title.style.color = "#243A73";
+    colorBoxes.style.backgroundColor = "#243A73";
+    colorBoxes2.style.backgroundColor = "#243A73";
 }
 
 
@@ -59,12 +66,11 @@ document.addEventListener("keyup", function(event) {
         if(element === "" || element === " "){
             return false;
         }
-
         tasksArray.push(element);
         console.log(tasksArray);
         document.getElementById("tarea").value = "";
         let content = document.createTextNode(element);
-        let brackets = document.createTextNode("[  ]");
+        let brackets = document.createTextNode("◼");
         mainDiv.appendChild(brackets);
         mainDiv.appendChild(content);
         mainDiv.appendChild(document.createElement('br'));
@@ -73,15 +79,15 @@ document.addEventListener("keyup", function(event) {
 
 
 function deleteTask(){
-    del_task.style.display = "block";
-    task.style.display = "none";
-    
-    let del_element = tasksArray.pop();
-
-    mainDiv.removeChild(mainDiv.lastChild)
-    
-    
+    if(confirm("This action will delete the last task, Do you want to procedd?") === true){
+        for(let i = 0; i<3; i++){
+            mainDiv.removeChild(mainDiv.lastChild);
+        }
+    }
+    return 0;
 }
+
+
 
 
 
