@@ -33,6 +33,24 @@ function dark(){
     title.style.color = "#F2EBE9";
     colorBoxes.style.backgroundColor = "#191A19";
     colorBoxes2.style.backgroundColor = "#191A19";
+    colorBoxes.addEventListener("mouseover", function(event){
+        event.target.style.backgroundColor = "#F2EBE9";
+        event.target.style.color = "#191A19";
+    });
+    colorBoxes2.addEventListener("mouseover", function(event){
+        event.target.style.backgroundColor = "#F2EBE9";
+        event.target.style.color = "#191A19";
+    }, false);
+    colorBoxes.addEventListener("mouseout", function(event){
+        event.target.style.backgroundColor = "#191A19";
+        event.target.style.color = "#F2EBE9";
+    }, false);
+    colorBoxes2.addEventListener("mouseout", function(event){
+        event.target.style.backgroundColor = "#191A19";
+        event.target.style.color = "#F2EBE9";
+    }, false);
+
+
     return true;
 }
 
@@ -55,10 +73,26 @@ function light(){
     title.style.color = "#243A73";
     colorBoxes.style.backgroundColor = "#243A73";
     colorBoxes2.style.backgroundColor = "#243A73";
+
+    colorBoxes.addEventListener("mouseover", function(event){
+        event.target.style.backgroundColor = "#101f44";
+        event.target.style.color = "#F2EBE9";
+    }, false);
+    colorBoxes2.addEventListener("mouseover", function(event){
+        event.target.style.backgroundColor = "#101f44";
+        event.target.style.color = "#F2EBE9";
+    }, false);
+    colorBoxes.addEventListener("mouseout", function(event){
+        event.target.style.backgroundColor = "#243A73";
+        event.target.style.color = "#F2EBE9";
+    }, false);
+    colorBoxes2.addEventListener("mouseout", function(event){
+        event.target.style.backgroundColor = "#243A73";
+        event.target.style.color = "#F2EBE9";
+    }, false);
 }
 
 
-const tasksArray = [];
 //Funcion que agrega las tareas al div principal
 document.addEventListener("keyup", function(event) {
     if (event.code === 'Enter') {
@@ -66,8 +100,6 @@ document.addEventListener("keyup", function(event) {
         if(element === "" || element === " "){
             return false;
         }
-        tasksArray.push(element);
-        console.log(tasksArray);
         document.getElementById("tarea").value = "";
         let content = document.createTextNode(element);
         let brackets = document.createTextNode("◼");
